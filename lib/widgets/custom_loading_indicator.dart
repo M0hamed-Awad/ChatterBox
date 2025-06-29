@@ -2,13 +2,17 @@ import 'package:chatter_box_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {
-  const CustomLoadingIndicator({super.key});
+  final Color indicatorColor;
+  const CustomLoadingIndicator({
+    super.key,
+    this.indicatorColor = kSecondaryColor,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const CircularProgressIndicator(
+    return  CircularProgressIndicator(
       backgroundColor: Colors.transparent,
-      color: kSecondaryColor,
+      color: indicatorColor,
       strokeWidth: 6,
     );
   }

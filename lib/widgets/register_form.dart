@@ -1,6 +1,6 @@
 import 'package:chatter_box_app/services/auth/auth_service.dart';
 import 'package:chatter_box_app/constants.dart';
-import 'package:chatter_box_app/cubit/profile_image_cubit.dart';
+import 'package:chatter_box_app/cubits/profile_image_cubit/profile_image_cubit.dart';
 import 'package:chatter_box_app/helper/custom_snack_bar.dart';
 import 'package:chatter_box_app/helper/utils.dart';
 import 'package:chatter_box_app/models/user_profile_model.dart';

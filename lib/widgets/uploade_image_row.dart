@@ -1,5 +1,5 @@
 import 'package:chatter_box_app/constants.dart';
-import 'package:chatter_box_app/cubit/profile_image_cubit.dart';
+import 'package:chatter_box_app/cubits/profile_image_cubit/profile_image_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
