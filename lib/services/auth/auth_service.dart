@@ -43,6 +43,18 @@ class AuthService {
     );
   }
 
+  String registrationExceptionsHandling({
+    required FirebaseAuthException exception,
+  }) {
+    if (exception.code == 'weak-password') {
+      return "The password is too weak.";
+    } else if (exception.code == 'email-already-in-use') {
+      return "The account already exists.";
+    } else {
+      return exception.toString();
+    }
+  }
+
   // Logout
   Future<void> logout() async {
     await _firebaseAuth.signOut();

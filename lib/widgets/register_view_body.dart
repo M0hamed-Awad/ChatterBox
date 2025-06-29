@@ -58,7 +58,7 @@ class RegisterViewBody extends StatelessWidget {
 
                 // Registration Form
 
-                const RegisterForm(),
+                RegisterForm(),
 
                 const SizedBox(
                   height: 30,

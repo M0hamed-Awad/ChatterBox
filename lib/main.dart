@@ -1,4 +1,5 @@
 import 'package:chatter_box_app/cubits/login_cubit/login_cubit.dart';
+import 'package:chatter_box_app/cubits/register_cubit/register_cubit.dart';
 import 'package:chatter_box_app/helper/utils.dart';
 import 'package:chatter_box_app/services/auth/auth_gate.dart';
 import 'package:chatter_box_app/themes/dark_mode.dart';
@@ -20,8 +21,11 @@ class ChatterBoxApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => LoginCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => LoginCubit()),
+        BlocProvider(create: (context) => RegisterCubit())
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         darkTheme: darkModeTheme,
