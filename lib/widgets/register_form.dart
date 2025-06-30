@@ -53,6 +53,7 @@ class RegisterForm extends StatelessWidget {
                 controller: _usernameController,
                 hintText: "Username",
                 validator: validateUsername,
+                isEnabled: state is RegisterLoading ? false : true,
               ),
               const SizedBox(
                 height: 20,
@@ -61,6 +62,7 @@ class RegisterForm extends StatelessWidget {
                 controller: _emailController,
                 hintText: "Email",
                 validator: validateEmail,
+                isEnabled: state is RegisterLoading ? false : true,
               ),
               const SizedBox(
                 height: 20,
@@ -70,6 +72,7 @@ class RegisterForm extends StatelessWidget {
                 hintText: "Password",
                 obscureText: true,
                 validator: validatePassword,
+                isEnabled: state is RegisterLoading ? false : true,
               ),
               const SizedBox(
                 height: 20,
@@ -85,6 +88,7 @@ class RegisterForm extends StatelessWidget {
                     return null;
                   }
                 },
+                isEnabled: state is RegisterLoading ? false : true,
               ),
               const SizedBox(
                 height: 50,

@@ -37,6 +37,7 @@ class LoginForm extends StatelessWidget {
                 controller: _emailController,
                 hintText: "Email",
                 validator: validateEmail,
+                isEnabled: state is LoginLoading ? false : true,
               ),
               const SizedBox(
                 height: 20,
@@ -52,6 +53,7 @@ class LoginForm extends StatelessWidget {
                     return null;
                   }
                 },
+                isEnabled: state is LoginLoading ? false : true,
               ),
               // TODO
               // Forget Password Functionally

@@ -49,7 +49,7 @@ class RegisterCubit extends Cubit<RegisterState> {
       ));
     } catch (e) {
       emit(RegisterFailure(e.toString()));
-    throw Exception("Unable to register the user: ${e.toString()}");
+      throw Exception("Unable to register the user: ${e.toString()}");
     }
   }
 

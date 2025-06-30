@@ -8,10 +8,11 @@ class CustomTextFormField extends StatelessWidget {
     required this.controller,
     this.validator,
     this.obscureText = false,
+    this.isEnabled = true,
   });
 
   final String hintText;
-  final bool obscureText;
+  final bool obscureText, isEnabled;
   final TextEditingController controller;
   final String? Function(String?)? validator;
 
@@ -37,6 +38,7 @@ class CustomTextFormField extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           child: TextFormField(
+            enabled: isEnabled,
             validator: validator != null
                 ? (value) {
                     return validator!(value);
@@ -64,6 +66,10 @@ class CustomTextFormField extends StatelessWidget {
                 fontSize: 22,
               ),
               enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              disabledBorder: OutlineInputBorder(
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(8),
               ),
